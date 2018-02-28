@@ -1,0 +1,741 @@
+!SESSION 2018-02-24 14:47:16.149 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-24 14:49:02.796
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2018-02-24 14:50:20.988
+!MESSAGE C:\Users\Administrator\.eclipse\org.eclipse.oomph.setup\cache\http___www.eclipse.org_setups_setups.zip (系统找不到指定的路径。)
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Administrator\.eclipse\org.eclipse.oomph.setup\cache\http___www.eclipse.org_setups_setups.zip (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.emf.ecore.resource.impl.FileURIHandlerImpl.createInputStream(FileURIHandlerImpl.java:99)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil$2.createInputStream(SetupCoreUtil.java:386)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleCache(ECFURIHandlerImpl.java:1594)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleCache(ECFURIHandlerImpl.java:1)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$ConnectionHandler.process(ECFURIHandlerImpl.java:1529)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:303)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1269)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.handleArchiveRedirection(SetupCoreUtil.java:549)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:348)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:174)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.createResourceSet(SetupCoreUtil.java:168)
+	at org.eclipse.oomph.setup.ui.recorder.RecorderManager.<clinit>(RecorderManager.java:120)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:205)
+	at org.eclipse.oomph.setup.ui.EarlyStartup.earlyStartup(EarlyStartup.java:22)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2747)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2018-02-24 14:50:21.180
+!MESSAGE The Eclipse Git-hosted URI 'http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup' is blocked for direct access.
+Please open a Bugzilla to add it to an official Oomph catalog.
+For initial testing, use the file system local version of the resource.
+Alternatively, run the setup archiver application as follows:
+  E:\Program Files\eclipse\eclipsec.exe -application org.eclipse.oomph.setup.core.SetupArchiver -consoleLog -noSplash -uris http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup
+
+!ENTRY org.eclipse.oomph.base 2 0 2018-02-24 14:50:21.182
+!MESSAGE java.io.IOException: Eclipse Git access blocked: http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: java.io.IOException: Eclipse Git access blocked: http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$ResourceLocator.demandLoadHelper(ResourceSetImpl.java:804)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$MappedResourceLocator.getResource(ResourceSetImpl.java:1204)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil$1.getResource(SetupCoreUtil.java:336)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.getResource(ResourceSetImpl.java:352)
+	at org.eclipse.oomph.base.util.BaseUtil.loadResourceSafely(BaseUtil.java:86)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.getInstallation(SetupContext.java:670)
+	at org.eclipse.oomph.setup.internal.core.SetupContext.create(SetupContext.java:281)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.createForIDE(SetupTaskPerformer.java:3864)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:639)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.access$5(SetupUIPlugin.java:416)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin$1$1.run(SetupUIPlugin.java:253)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: java.io.IOException: Eclipse Git access blocked: http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/org.eclipse.setup
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleEclipseGit(ECFURIHandlerImpl.java:1606)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleEclipseGit(ECFURIHandlerImpl.java:1)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$ConnectionHandler.process(ECFURIHandlerImpl.java:1327)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:303)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1269)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 12 more
+!SESSION 2018-02-24 14:54:20.994 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -data file:/E:/eclipse-workspace/myWorkspace/ -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-24 14:54:33.728
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-24 14:55:24.406
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-24 14:55:24.407
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-24 14:55:24.568
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-24 14:55:24.569
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2018-02-24 14:55:51.348
+!MESSAGE C:\Users\Administrator\.eclipse\org.eclipse.oomph.setup\cache\http___www.eclipse.org_setups_setups.zip (系统找不到指定的路径。)
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Administrator\.eclipse\org.eclipse.oomph.setup\cache\http___www.eclipse.org_setups_setups.zip (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.emf.ecore.resource.impl.FileURIHandlerImpl.createInputStream(FileURIHandlerImpl.java:99)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil$2.createInputStream(SetupCoreUtil.java:386)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleCache(ECFURIHandlerImpl.java:1594)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleCache(ECFURIHandlerImpl.java:1)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$ConnectionHandler.process(ECFURIHandlerImpl.java:1529)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:303)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1269)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.handleArchiveRedirection(SetupCoreUtil.java:549)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:348)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:174)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.createResourceSet(SetupCoreUtil.java:168)
+	at org.eclipse.oomph.setup.ui.recorder.RecorderManager.<clinit>(RecorderManager.java:120)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:205)
+	at org.eclipse.oomph.setup.ui.EarlyStartup.earlyStartup(EarlyStartup.java:22)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2747)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-02-24 14:59:29.405 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-24 15:00:10.020
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2018-02-24 15:01:19.028
+!MESSAGE C:\Users\Administrator\.eclipse\org.eclipse.oomph.setup\cache\http___www.eclipse.org_setups_setups.zip (系统找不到指定的路径。)
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Administrator\.eclipse\org.eclipse.oomph.setup\cache\http___www.eclipse.org_setups_setups.zip (系统找不到指定的路径。)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(Unknown Source)
+	at java.io.FileInputStream.<init>(Unknown Source)
+	at org.eclipse.emf.ecore.resource.impl.FileURIHandlerImpl.createInputStream(FileURIHandlerImpl.java:99)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil$2.createInputStream(SetupCoreUtil.java:386)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleCache(ECFURIHandlerImpl.java:1594)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$InputStreamConnectionHandler.handleCache(ECFURIHandlerImpl.java:1)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl$ConnectionHandler.process(ECFURIHandlerImpl.java:1529)
+	at org.eclipse.oomph.setup.internal.core.util.ECFURIHandlerImpl.createInputStream(ECFURIHandlerImpl.java:303)
+	at org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl.createInputStream(ExtensibleURIConverterImpl.java:360)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1269)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.handleArchiveRedirection(SetupCoreUtil.java:549)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:348)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.configureResourceSet(SetupCoreUtil.java:174)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.createResourceSet(SetupCoreUtil.java:168)
+	at org.eclipse.oomph.setup.ui.recorder.RecorderManager.<clinit>(RecorderManager.java:120)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:205)
+	at org.eclipse.oomph.setup.ui.EarlyStartup.earlyStartup(EarlyStartup.java:22)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:77)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:53)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$40.run(Workbench.java:2747)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-02-27 08:49:27.497 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-27 08:50:01.011
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 09:14:33.590
+!MESSAGE Could not read settings.xml, assuming default values
+!STACK 0
+org.apache.maven.settings.building.SettingsBuildingException: 1 problem was encountered while building the effective settings
+[FATAL] Non-parseable settings E:\maven\apache-maven-3.5.0\conf\settings.xml: expected > to finsh end tag not < from line 160 (position: TEXT seen ...</mirrorOf>        \n    </mirror\n  <... @166:4)  @ E:\maven\apache-maven-3.5.0\conf\settings.xml, line 166, column 4
+
+	at org.apache.maven.settings.building.DefaultSettingsBuilder.build(DefaultSettingsBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getSettings(MavenImpl.java:470)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.reloadSettings(MavenImpl.java:535)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.mavenConfigurationChange(MavenImpl.java:557)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.preferenceChange(MavenConfigurationImpl.java:183)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:848)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:851)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.put(EclipsePreferences.java:863)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.setUserSettingsFile(MavenConfigurationImpl.java:132)
+	at org.eclipse.m2e.core.ui.internal.preferences.MavenSettingsPreferencePage$1.run(MavenSettingsPreferencePage.java:151)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 09:14:49.105
+!MESSAGE Could not read settings.xml, assuming default values
+!STACK 0
+org.apache.maven.settings.building.SettingsBuildingException: 2 problems were encountered while building the effective settings
+[FATAL] Non-parseable settings E:\maven\apache-maven-3.5.0\conf\settings.xml: expected > to finsh end tag not < from line 160 (position: TEXT seen ...</mirrorOf>        \n    </mirror\n  <... @166:4)  @ E:\maven\apache-maven-3.5.0\conf\settings.xml, line 166, column 4
+[FATAL] Non-parseable settings E:\maven\apache-maven-3.5.0\conf\settings.xml: expected > to finsh end tag not < from line 160 (position: TEXT seen ...</mirrorOf>        \n    </mirror\n  <... @166:4)  @ E:\maven\apache-maven-3.5.0\conf\settings.xml, line 166, column 4
+
+	at org.apache.maven.settings.building.DefaultSettingsBuilder.build(DefaultSettingsBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.getSettings(MavenImpl.java:470)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.reloadSettings(MavenImpl.java:535)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.mavenConfigurationChange(MavenImpl.java:557)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.preferenceChange(MavenConfigurationImpl.java:183)
+	at org.eclipse.core.internal.preferences.EclipsePreferences$2.run(EclipsePreferences.java:848)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.firePreferenceEvent(EclipsePreferences.java:851)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.put(EclipsePreferences.java:863)
+	at org.eclipse.m2e.core.internal.preferences.MavenConfigurationImpl.setGlobalSettingsFile(MavenConfigurationImpl.java:144)
+	at org.eclipse.m2e.core.ui.internal.preferences.MavenSettingsPreferencePage$1.run(MavenSettingsPreferencePage.java:150)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 09:33:29.542
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 09:33:29.543
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:06:17.730
+!MESSAGE The POM for commons-codec:commons-codec:jar:1.6 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:06:18.455
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:06:18.470
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:06:35.807
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:06:36.622
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-02-27 10:06:47.841
+!MESSAGE Invalid ZIP archive: E:\maven\Repositories\com\fasterxml\jackson\core\jackson-databind\2.4.2\jackson-databind-2.4.2.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:06:53.369
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:06:53.951
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:08:32.331
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.jdt.core 4 0 2018-02-27 10:10:32.402
+!MESSAGE Invalid ZIP archive: E:\maven\Repositories\com\fasterxml\jackson\core\jackson-databind\2.4.2\jackson-databind-2.4.2.jar
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:10:43.476
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:10:44.095
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:11:43.278
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:11:43.779
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:14:22.868
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:14:24.019
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:38:14.039
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:38:14.191
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:38:27.817
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:38:27.934
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:38:37.498
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:38:37.627
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:38:54.769
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:40:04.049
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:40:04.736
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:41:48.401
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:41:50.841
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:41:50.998
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:41:58.665
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:41:58.824
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:42:00.058
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:42:00.302
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:42:51.228
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:42:51.881
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:43:47.391
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:43:47.467
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:43:48.207
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:43:48.536
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:44:16.048
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:44:16.403
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:44:16.945
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:44:17.058
+!MESSAGE The POM for com.github.pagehelper:pagehelper:jar:3.4.2-fix is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:45:09.885
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:45:12.035
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:46:55.473
+!MESSAGE The POM for com.taotao:taotao-pojo:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:46:55.559
+!MESSAGE The POM for com.taotao:taotao-pojo:jar:0.0.1-SNAPSHOT is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:54:48.320
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:31.864
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:35.365
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:35.932
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:36.176
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:36.436
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:41.284
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:41.795
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:42.026
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:58:42.147
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 10:59:54.823
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:01:34.177
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:01:34.464
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:01:35.573
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:01:36.289
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:11.393
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:11.678
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:13.007
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:14.642
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:14.828
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:14.902
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:16.144
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:49.483
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:49.723
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:49.818
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:03:51.097
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:04.048
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:04.212
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:04.284
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:05.559
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:17.538
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:17.708
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:17.787
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:19.004
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:30.705
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:30.904
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:31.721
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:32.980
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:34.414
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:34.603
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:34.676
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:35.626
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:51.423
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:51.673
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:51.780
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:53.174
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:56.810
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:57.000
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:57.076
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:04:58.307
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:05:31.724
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:05:31.903
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:05:31.976
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:05:33.326
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 11:05:34.440
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 11:05:34.441
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:05:39.469
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.171
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.193
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.212
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.231
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.247
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.263
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.281
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.314
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.345
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.366
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.382
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.398
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.412
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.429
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.444
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.459
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.474
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.492
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.509
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.524
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.539
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.555
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.570
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.585
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-02-27 11:06:09.601
+!MESSAGE invalid LOC header (bad signature)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:06:52.452
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:06:52.694
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:06:52.813
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:06:54.274
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:07:00.195
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:07:00.369
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:07:00.441
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:07:01.731
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 11:07:31.933
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 11:07:31.934
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 11:07:47.634
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-02-27 11:07:47.634
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:14:32.265
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:18:54.448
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:18:58.092
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:18:58.541
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:18:59.979
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:19:00.364
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:19:01.124
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:22:09.014
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:22:10.407
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:22:10.835
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:22:12.264
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:22:12.689
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:22:13.549
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:23:04.355
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:23:04.740
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:23:06.095
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:23:07.582
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:23:08.118
+!MESSAGE The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-02-27 11:23:08.660
+!MESSAGE The POM for commons-io:commons-io:jar:2.2 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+!SESSION 2018-02-27 17:08:32.752 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-27 17:10:08.439
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-02-28 08:45:15.851 -----------------------------------------------
+eclipse.buildId=4.7.0.I20170612-0950
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-02-28 08:47:06.171
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
