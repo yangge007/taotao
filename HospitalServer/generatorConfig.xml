@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="context1">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+	
+		<jdbcConnection connectionURL="jdbc:mysql://svnserver:3306/sakila"
+			driverClass="com.mysql.jdbc.Driver" password="team01" userId="team01" />
+
+		<javaModelGenerator targetPackage="com.isoft.db.entity"
+			targetProject="HospitalServer/src/main/java" />
+
+		<sqlMapGenerator targetPackage="com.isoft.db.mapper"
+			targetProject="HospitalServer/src/main/config" />
+
+		<javaClientGenerator targetPackage="com.isoft.db.mapper"
+			targetProject="HospitalServer/src/main/java" type="XMLMAPPER" />
+
+		<table tableName="country" enableSelectByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableCountByExample="false"></table>
+
+	</context>
+</generatorConfiguration>

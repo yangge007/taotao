@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+		<mybatis-spring:scan base-package="com.isoft.db"/>
+		
+		<bean name="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://svnserver:3306/sakila"></property>
+		<property name="username" value="team01"></property>
+		<property name="password" value="team01"></property>
+		</bean>
+
+		
+		<bean name="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="mapperLocations" value="classpath:com/isoft/db/mapper/*.xml"></property>
+		<property name="configuration" ref="mybatisConfig"></property>
+		</bean>
+		
+		<bean name="mybatisConfig" class="org.apache.ibatis.session.Configuration">
+		<property name="lazyLoadingEnabled" value="true"></property>
+		<property name="aggressiveLazyLoading" value="false"></property>
+		<property name="logImpl" value="org.apache.ibatis.Logging.Log4j.Log4jImpl"></property>
+		</bean>
+		
+		<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sessionFactory"></property>
+		<property name="basePackage" value="com/isoft/db/mapper"></property>
+		</bean>
+		
+		<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+		</bean>
+
+</beans>

@@ -19,6 +19,7 @@ public class ItemServiceImpl implements ItemService {
 	
 	@Override
 	public TbItem getItemById(Long itemId) {
+		System.out.println("hello");
 //		itemMapper.selectByPrimaryKey(itemId);
 		TbItemExample example = new TbItemExample();
 		//创建查询条件
@@ -31,5 +32,7 @@ public class ItemServiceImpl implements ItemService {
 		}
 		return item;
 	}
+	
+	
 
 }
