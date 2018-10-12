@@ -1,0 +1,4 @@
+/applicationContext-mvc.xml
+/applicationContext-mybatis.xml
+/com/
+/log4j.properties

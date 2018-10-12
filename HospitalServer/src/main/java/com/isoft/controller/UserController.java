@@ -20,7 +20,6 @@ public class UserController {
 	@RequestMapping("find/{uid}")
 	public User findUser(@PathVariable String uid) {
 		System.out.println(uid);
-		
 		return service.findUserByUid(uid);
 	}
 	
